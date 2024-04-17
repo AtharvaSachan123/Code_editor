@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useRef } from 'react'
 import LanguageSelector from './LanguageSelector'
 import { CODE_SNIPPETS } from '../constants'
+import Output from './Output'
 export const CodeEditior = () => {
     const editorRef = useRef()
     const [value, setValue] = useState("")
@@ -40,7 +41,8 @@ export const CodeEditior = () => {
 
                 </Box>
 
-
+                        <Output editorRef={editorRef}
+                        language={language}/>
             </HStack>
 
 
