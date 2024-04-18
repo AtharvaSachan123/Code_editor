@@ -1,4 +1,4 @@
-import { Box, HStack } from '@chakra-ui/react'
+import { Box, HStack, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Editor } from '@monaco-editor/react'
 import { useState } from 'react'
@@ -25,8 +25,8 @@ export const CodeEditior = () => {
     }
     return (
         <Box>
-            <HStack spacing={4}>
-                <Box w='50%'>
+            <VStack spacing={4}>
+                <Box w='95%'>
 
                     <LanguageSelector language={language} onSelect={onSelect} />
                     <Editor height="75vh"
@@ -43,7 +43,7 @@ export const CodeEditior = () => {
 
                         <Output editorRef={editorRef}
                         language={language}/>
-            </HStack>
+            </VStack>
 
 
 
